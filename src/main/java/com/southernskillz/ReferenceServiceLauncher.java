@@ -20,7 +20,7 @@ public class ReferenceServiceLauncher extends AbstractVerticle{
         options.setInstances(Runtime.getRuntime().availableProcessors()); //Deploy one verticle per available processor/core.
 
         Vertx vertx = Vertx.vertx();
-        vertx.deployVerticle("com.southernskills.verticle.BenchmarkRestVerticle", options, res -> {
+        vertx.deployVerticle("com.southernskillz.verticle.BenchmarkRestVerticle", options, res -> {
             if (res.succeeded()) {
                 logger.info("RestVerticle Deployed. Deploy id is: " + res.result());
             } else {
